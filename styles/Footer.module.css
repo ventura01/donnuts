@@ -1,0 +1,31 @@
+.container{
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-top: 1px dotted var(--terciary-color);
+}
+.wrapper{
+    width: 1220px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemsList{
+    list-style: none;
+    /* font-weight: 600; */
+    display: flex;
+}
+.text{
+    color: var(--terciary-color);
+
+}
+.listItem{
+    margin-right: 30px;
+}
+.socialMediaCont{
+    display: flex;
+    justify-content: flex-end;
+}
+.socialMediaIcon{
+    margin-left: 20px;
+}

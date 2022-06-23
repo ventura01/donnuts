@@ -1,0 +1,25 @@
+:root{
+  --primary-color: #ffdcae;
+  --secundary-color: #ff9100;
+  --terciary-color: #b83400;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffdcae;
+}
+/* Mantener el FOOTER siempre abajo */
+
+/* ====================================== */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
