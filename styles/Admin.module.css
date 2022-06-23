@@ -6,11 +6,13 @@
     flex: 1;
     background-color: white;
     padding: 20px;
+    border-top-left-radius: 25px;
 }
 .right{
     flex: 1;
     background-color: white;
     padding: 20px;
+    border-top-right-radius: 25px;
 }
 .table{
     border-spacing: 20px;
@@ -26,7 +28,7 @@
     background-color: #f3f3f3;
 }
 .table .tbody .trBody:last-of-type{
-    border-bottom: 2px solid #c7c7c7;
+    /* border-bottom: 2px solid #c7c7c7; */
 }
 .table .tbody .trBody{ border-bottom: 1px solid #dddddd;}
 .button{

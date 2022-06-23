@@ -4,8 +4,9 @@ import Image from "next/image";
 import styles from "../../styles/Admin.module.css";
 import axios from "axios";
 
-const Index = ({ orders }) => {
+const Index = ({ orders, products }) => {
   const [orderList, setOrderList] = useState(orders);
+  const [productList, setProductList] = useState(products);
 
   const status = ["Preparing", "On the way", "Delivered"];
   const handleStatus = async (id) => {
@@ -19,6 +20,16 @@ const Index = ({ orders }) => {
         res.data,
         ...orderList.filter((order) => order._id !== id),
       ]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleDelete = async (id) => {
+    try {
+      const res = await axios.delete(
+        "http://localhost:3000/api/products/" + id
+      );
+      setProductList(productList.filter((product) => product._id !== id));
     } catch (error) {
       console.log(error);
     }
@@ -39,23 +50,30 @@ const Index = ({ orders }) => {
               </tr>
             </thead>
             <tbody className={styles.tbody}>
-              <tr className={styles.trBody}>
-                <td className={styles.tdBody}>
-                  <Image
-                    src={"/img/meta.svg"}
-                    alt=""
-                    width={50}
-                    height={50}
-                  ></Image>
-                </td>
-                <td className={styles.tdBody}>Pizza ID</td>
-                <td className={styles.tdBody}>Pizza Title</td>
-                <td className={styles.tdBody}>U$19</td>
-                <td className={styles.tdBody}>
-                  <button className={styles.button}>Edit</button>
-                  <button className={styles.button}>Delete</button>
-                </td>
-              </tr>
+              {products.map((product) => (
+                <tr className={styles.trBody} key={product._id}>
+                  <td className={styles.tdBody}>
+                    <Image
+                      src={product.img}
+                      alt=""
+                      width={50}
+                      height={50}
+                    ></Image>
+                  </td>
+                  <td className={styles.tdBody}>{product._id}</td>
+                  <td className={styles.tdBody}>{product.title}</td>
+                  <td className={styles.tdBody}>U${product.price}</td>
+                  <td className={styles.tdBody}>
+                    <button className={styles.button}>Edit</button>
+                    <button
+                      className={styles.button}
+                      onClick={() => handleDelete(product._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -106,7 +124,8 @@ const Index = ({ orders }) => {
 
 export const getServerSideProps = async () => {
   const orderRes = await axios.get("http://localhost:3000/api/orders");
-  return { props: { orders: orderRes.data } };
+  const productRes = await axios.get("http://localhost:3000/api/products");
+  return { props: { orders: orderRes.data, products: productRes.data } };
 };
 
 export default Index;
