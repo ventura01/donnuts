@@ -162,7 +162,7 @@ const Cart = () => {
                     className={styles.clearCartButton}
                     onClick={() => handleClearCartButton()}
                   >
-                    <BsFillTrashFill size=".8rem" /> Clear cart
+                    <BsFillTrashFill color="red" size=".8rem" /> Clear cart
                   </button>
                 </div>
               </div>

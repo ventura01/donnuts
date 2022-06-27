@@ -1,0 +1,29 @@
+.container{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    padding: 0 10px;
+    margin-bottom: 20px;
+    height: 20px;
+    height: 40px;
+}
+.button{
+    cursor: pointer;
+    color: white;
+    background-color: teal;
+    font-weight: 700;
+    height: 40px;
+    border: none;
+    margin-bottom: 20px;
+}
+.error{
+    font-size: 13px;
+    color: red;
+}
