@@ -5,8 +5,10 @@ const handler = async (req, res) => {
   const {
     method,
     query: { id },
+    cookies,
   } = req;
 
+  const token = cookies.token;
   await dbConnect();
 
   if (method === "GET") {
@@ -18,6 +20,9 @@ const handler = async (req, res) => {
     }
   }
   if (method === "PUT") {
+    if (!token || token !== process.env.token) {
+      return res.status(401).json("You are not authenticated");
+    }
     try {
       const product = await Product.findByIdAndUpdate(id, req.body, {
         new: true,
@@ -28,6 +33,9 @@ const handler = async (req, res) => {
     }
   }
   if (method === "DELETE") {
+    if (!token || token !== process.env.token) {
+      return res.status(401).json("You are not authenticated");
+    }
     try {
       await Product.findByIdAndDelete(id);
       res.status(200).json("The product was deleted successfully");

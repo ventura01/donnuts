@@ -5,7 +5,7 @@ import styles from "../styles/OrderDetail.module.css";
 // import { clearCart } from "../redux/cartSlice";
 // import axios from "axios";
 
-const OrderDetail = ({ cartTotalAmount, createOrder }) => {
+const OrderDetail = ({ cartTotalAmount, createOrder, closeModal }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
@@ -25,6 +25,9 @@ const OrderDetail = ({ cartTotalAmount, createOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <span className={styles.close} onClick={() => closeModal(false)}>
+          X
+        </span>
         <h1>You will pay ${cartTotalAmount} after delivery.</h1>
         <div className={styles.item}>
           <label htmlFor="name" className={styles.lable}>

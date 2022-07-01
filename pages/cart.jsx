@@ -47,7 +47,7 @@ const Cart = () => {
     } catch (error) {
       console.log(error);
     }
-    console.log(data);
+    // console.log(data);
   };
   // console.log(quantity);
   return (
@@ -132,7 +132,7 @@ const Cart = () => {
                       </td>
                       <td className={styles.tdBody}>
                         <span className={styles.total}>
-                          U${product.price * product.quantity}
+                          U${`${product.price * product.quantity}`.slice(0, 5)}
                         </span>
                       </td>
                       <td className={styles.tdBody}>
@@ -172,14 +172,14 @@ const Cart = () => {
                 <h2 className={styles.title}>CART TOTAL</h2>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Sub-total:</b>$
-                  {cart.cartTotalAmount}
+                  {`${cart.cartTotalAmount}`.slice(0, 5)}
                 </div>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Discount:</b>$0.00
                 </div>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Total:</b>$
-                  {cart.cartTotalAmount}
+                  {`${cart.cartTotalAmount}`.slice(0, 5)}
                 </div>
                 <button className={styles.button} onClick={() => setCash(true)}>
                   CHECKOUT NOW!
@@ -190,6 +190,7 @@ const Cart = () => {
               <OrderDetail
                 cartTotalAmount={cart.cartTotalAmount}
                 createOrder={createOrder}
+                closeModal={setCash}
               />
             )}
           </div>

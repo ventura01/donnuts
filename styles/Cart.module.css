@@ -126,10 +126,15 @@
 .button{
     height: 30px;
     border: none;
+    border-radius: 25px;
     color: teal;
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 .qtyContButton{
     padding: 5px 10px;
