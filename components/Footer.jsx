@@ -3,9 +3,8 @@ import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 
 import { IconContext } from "react-icons";
-import { BsFacebook, BsTwitter, BsTwitch, BsInstagram, } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsTwitch, BsInstagram } from "react-icons/bs";
 import { GiDonut } from "react-icons/gi";
-
 
 const months = [
   "January",
@@ -25,17 +24,18 @@ const year = new Date().getFullYear();
 const month = new Date().getMonth();
 const Footer = () => {
   return (
-    <IconContext.Provider value={{color:"#b83400", size:"1.25rem"}}>
+    <IconContext.Provider value={{ color: "#b83400", size: "1.25rem" }}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <div className={styles.brandCont}>
-              <GiDonut color="#b83400" size="3rem"/>
+              <GiDonut color="#b83400" size="3rem" />
             </div>
           </div>
           <div className={styles.center}>
             <p className={styles.text}>
-              All rights reserved &copy; {months[month]}, {year}
+              &copy; Donnuts Shop - All rights reserved - {months[month]},{" "}
+              {year}
             </p>
             {/*<ul className={styles.itemsList}>
               <li className={styles.listItem}>{year}</li>
@@ -47,20 +47,20 @@ const Footer = () => {
         </ul>*/}
           </div>
           <div className={styles.right}>
-          <div className={styles.socialMediaCont}>
-          <div className={styles.socialMediaIcon}>
-            <BsFacebook />
-          </div>
-          <div className={styles.socialMediaIcon}>
-            <BsTwitter />
-          </div>
-          <div className={styles.socialMediaIcon}>
-            <BsTwitch />
-          </div>
-          <div className={styles.socialMediaIcon}>
-            <BsInstagram />
-          </div>
-        </div>
+            <div className={styles.socialMediaCont}>
+              <div className={styles.socialMediaIcon}>
+                <BsFacebook />
+              </div>
+              <div className={styles.socialMediaIcon}>
+                <BsTwitter />
+              </div>
+              <div className={styles.socialMediaIcon}>
+                <BsTwitch />
+              </div>
+              <div className={styles.socialMediaIcon}>
+                <BsInstagram />
+              </div>
+            </div>
           </div>
         </div>
       </div>

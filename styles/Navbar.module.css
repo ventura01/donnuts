@@ -66,3 +66,8 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
+@media screen and (max-width: 480px) {
+    .item:nth-child(2){
+        display: none;
+    }
+}

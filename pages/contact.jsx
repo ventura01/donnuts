@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 const contact = () => {
   return (
-    <Layout>
+    <Layout title="Contact" description="Contact page.">
       <div className={styles.container}>contact</div>
     </Layout>
   );

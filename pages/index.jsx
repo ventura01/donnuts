@@ -8,13 +8,15 @@ import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 import ProductList from "../components/ProductList";
+import Slider from "../components/Slider";
 
 export default function Home({ productList, admin }) {
   const [close, setClose] = useState(true);
-  console.log(productList);
+  // console.log(productList);
   return (
-    <Layout title="Home" description="Tienda Github en línea.">
+    <Layout title="Home" description="The best donnuts shop in town.">
       {/*<Header />*/}
+      <Slider />
       {admin && <AddButton setClose={setClose} />}
       <div className={styles.container}>
         <ProductList productList={productList} />

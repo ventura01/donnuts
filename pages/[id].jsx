@@ -31,12 +31,12 @@ const ProductPage = ({ product }) => {
     dispatch(getTotals());
   }, [cart, dispatch]);
   const handleAddItemToCart = (product) => {
-    dispatch(addItemToCart({ ...product, price, quantity}));
+    dispatch(addItemToCart({ ...product, price, quantity }));
     // console.log(price, quantity, size, color);
   };
   return (
     <IconContext.Provider value={{ color: "gray", size: "1rem" }}>
-      <Layout>
+      <Layout title={product.title} description="Product page.">
         <div className={styles.container}>
           <div className={styles.item}>
             <div className={styles.imgContainer}>

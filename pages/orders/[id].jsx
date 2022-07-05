@@ -20,7 +20,7 @@ const Order = ({ order }) => {
     if (index - status > 1) return styles.undone;
   };
   return (
-    <Layout>
+    <Layout title="Order" description="Order page.">
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.row}>
@@ -55,7 +55,9 @@ const Order = ({ order }) => {
                     <span className={styles.address}>{order.address}</span>
                   </td>
                   <td className={styles.tdBody}>
-                    <span className={styles.total}>U${order.total}</span>
+                    <span className={styles.total}>
+                      U${`${order.total}`.slice(0, 6)}
+                    </span>
                   </td>
                 </tr>
               </tbody>
@@ -104,13 +106,15 @@ const Order = ({ order }) => {
           <div className={styles.wrapper}>
             <h2 className={styles.title}>CART TOTAL</h2>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Sub-total:</b>${order.total}
+              <b className={styles.totalTextTitle}>Sub-total:</b>$
+              {`${order.total}`.slice(0, 6)}
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>Discount:</b>$0.00
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Total:</b>${order.total}
+              <b className={styles.totalTextTitle}>Total:</b>$
+              {`${order.total}`.slice(0, 6)}
             </div>
             <button disabled className={styles.button}>
               PAID!

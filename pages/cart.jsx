@@ -51,7 +51,7 @@ const Cart = () => {
   };
   // console.log(quantity);
   return (
-    <Layout>
+    <Layout title="Cart" description="Cart page.">
       {quantity === 0 ? (
         <div className={styles.cartEmpty}>
           <div className={styles.emptyWrapper}>

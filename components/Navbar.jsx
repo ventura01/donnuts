@@ -8,7 +8,7 @@ import { MdShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
-  console.log(cartTotalQuantity);
+  // console.log(cartTotalQuantity);
   return (
     <nav className={styles.container}>
       <div className={styles.wrapper}>
@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/" passHref>
             <a>
               <h3 className={styles.logo}>
-                <span className={styles.logoText}>Donnuts</span>shop
+                <span className={styles.logoText}>Donuts</span>shop
               </h3>
             </a>
           </Link>
