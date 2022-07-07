@@ -34,8 +34,7 @@ const Footer = () => {
           </div>
           <div className={styles.center}>
             <p className={styles.text}>
-              &copy; Donnuts Shop - All rights reserved - {months[month]},{" "}
-              {year}
+              &copy; Donuts Shop - All rights reserved - {months[month]}, {year}
             </p>
             {/*<ul className={styles.itemsList}>
               <li className={styles.listItem}>{year}</li>

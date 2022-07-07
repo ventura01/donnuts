@@ -8,6 +8,7 @@
     align-items: center;
     margin: 20px;
     border: solid 5px rgb(255, 209, 122);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -48,4 +49,9 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+  }
+  @media screen and (max-width: 480px) {
+    .container{
+      width: 100%;
+    }
   }

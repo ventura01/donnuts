@@ -70,4 +70,7 @@
     .item:nth-child(2){
         display: none;
     }
+    .logoText{
+        margin-left: 40px;
+    }
 }

@@ -6,7 +6,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 const images = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/the-webdev/image/upload/v1657049514/uploads/19dec03-1_rqneek.jpg",
+    url: "https://res.cloudinary.com/the-webdev/image/upload/v1657058502/uploads/donut-stocks_as0ikx.png",
   },
 
   {
@@ -37,7 +37,11 @@ const Slider = () => {
         style={{ left: 0 }}
         onClick={() => handleArrow("l")}
       >
-        <BsChevronCompactLeft size="12rem" color="white" />
+        <BsChevronCompactLeft
+          className={styles.arrow}
+          size="12rem"
+          color="white"
+        />
       </div>
       <div
         className={styles.wrapper}
@@ -54,7 +58,11 @@ const Slider = () => {
         style={{ right: 0 }}
         onClick={() => handleArrow("r")}
       >
-        <BsChevronCompactRight size="12rem" color="white" />
+        <BsChevronCompactRight
+          className={styles.arrow}
+          size="12rem"
+          color="white"
+        />
       </div>
     </div>
   );

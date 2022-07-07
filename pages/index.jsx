@@ -14,14 +14,14 @@ export default function Home({ productList, admin }) {
   const [close, setClose] = useState(true);
   // console.log(productList);
   return (
-    <Layout title="Home" description="The best donnuts shop in town.">
+    <Layout title="Home" description="The best donuts shop in town.">
       {/*<Header />*/}
       <Slider />
       {admin && <AddButton setClose={setClose} />}
       <div className={styles.container}>
         <ProductList productList={productList} />
-        </div>
-        {!close && <Add setClose={setClose} />}
+      </div>
+      {!close && <Add setClose={setClose} />}
     </Layout>
   );
 }
