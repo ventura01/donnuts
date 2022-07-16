@@ -56,7 +56,7 @@ const Order = ({ order }) => {
                   </td>
                   <td className={styles.tdBody}>
                     <span className={styles.total}>
-                      U${`${order.total}`.slice(0, 6)}
+                      U${order.total.toFixed(2)}
                     </span>
                   </td>
                 </tr>
@@ -107,14 +107,14 @@ const Order = ({ order }) => {
             <h2 className={styles.title}>CART TOTAL</h2>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>Sub-total:</b>$
-              {`${order.total}`.slice(0, 6)}
+              {order.total.toFixed(2)}
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>Discount:</b>$0.00
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>Total:</b>$
-              {`${order.total}`.slice(0, 6)}
+              {order.total.toFixed(2)}
             </div>
             <button disabled className={styles.button}>
               PAID!

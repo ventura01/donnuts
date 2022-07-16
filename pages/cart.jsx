@@ -44,6 +44,7 @@ const Cart = () => {
       const res = await axios.post("http://localhost:3000/api/orders", data);
       res.status === 201 && router.push("/orders/" + res.data._id);
       dispatch(clearCart());
+      localStorage.clear();
     } catch (error) {
       console.log(error);
     }
@@ -172,14 +173,14 @@ const Cart = () => {
                 <h2 className={styles.title}>CART TOTAL</h2>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Sub-total:</b>$
-                  {`${cart.cartTotalAmount}`.slice(0, 5)}
+                  {cart.cartTotalAmount.toFixed(2)}
                 </div>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Discount:</b>$0.00
                 </div>
                 <div className={styles.totalText}>
                   <b className={styles.totalTextTitle}>Total:</b>$
-                  {`${cart.cartTotalAmount}`.slice(0, 5)}
+                  {cart.cartTotalAmount.toFixed(2)}
                 </div>
                 <button className={styles.button} onClick={() => setCash(true)}>
                   CHECKOUT NOW!

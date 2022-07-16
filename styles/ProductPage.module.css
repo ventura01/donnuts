@@ -46,10 +46,12 @@
     border-bottom: 3px solid var(--terciary-color);
     width: max-content;
 }
-/* .infoText{
-    text-align: center;
-    font-weight: bold;
-} */
+.reviews{
+    display: flex;
+}
+.star{
+    margin-right: 3px;
+}
 .add{
     margin-top: 10px;
     display: flex;

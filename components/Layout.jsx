@@ -18,7 +18,7 @@ const Layout = ({ children, title, description }) => {
       </Head>
       <Navbar />
       <main className={styles.container}>{children}</main>
-      {/*<Footer />*/}
+      <Footer />
     </div>
   );
 };

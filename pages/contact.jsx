@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "../styles/Contact.module.css";
 import Layout from "../components/Layout";
 
-const contact = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+const Contact = () => {
   const form = useRef();
+  const [emailSent, setEmailSent] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -20,6 +20,10 @@ const contact = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          setEmailSent(true);
+          setTimeout(() => {
+            setEmailSent(false);
+          }, 5000);
         },
         (error) => {
           console.log(error.text);
@@ -47,18 +51,28 @@ const contact = () => {
               type="email"
               name="user_email"
             />
+            <label className={styles.label}>Phone</label>
+            <input
+              placeholder="505 8689 8989"
+              className={styles.input}
+              type="text"
+              name="user_phone"
+            />
             <label className={styles.label}>Message</label>
             <textarea
               className={styles.textarea}
               placeholder="Message"
               name="message"
             />
-            <input className={styles.input} type="submit" value="Send" />
+            <input className={styles.submit} type="submit" value="Send" />
           </form>
+          {emailSent && (
+            <span className={styles.emailSent}>Message sent successfully.</span>
+          )}
         </div>
       </div>
     </Layout>
   );
 };
 
-export default contact;
+export default Contact;

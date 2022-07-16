@@ -15,6 +15,8 @@ import {
   BsTwitch,
   BsInstagram,
   BsArrowLeft,
+  BsFillStarFill,
+  BsStarHalf
 } from "react-icons/bs";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 
@@ -62,6 +64,23 @@ const ProductPage = ({ product }) => {
             <div className={styles.infoProduct}>
               <h1 className={styles.title}>{product.title}</h1>
               <h3 className={styles.price}>U${price}</h3>
+              <div className={styles.reviews}>
+                <div className={styles.star}>
+                  <BsFillStarFill color="orange"/>
+                </div>
+                <div className={styles.star}>
+                  <BsFillStarFill color="orange"/>
+                </div>
+                <div className={styles.star}>
+                  <BsFillStarFill color="orange"/>
+                </div>
+                <div className={styles.star}>
+                  <BsFillStarFill color="orange"/>
+                </div>
+                <div className={styles.star}>
+                  <BsStarHalf color="orange"/>
+                </div>
+              </div>
               <p className={styles.desc}>{product.desc}</p>
               {/*<span className={styles.infoText}>
                 Choose your Size and Quantity

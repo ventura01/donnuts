@@ -28,9 +28,7 @@ const OrderDetail = ({ cartTotalAmount, createOrder, closeModal }) => {
         <span className={styles.close} onClick={() => closeModal(false)}>
           X
         </span>
-        <h1>
-          You will pay ${`${cartTotalAmount}`.slice(0, 6)} after delivery.
-        </h1>
+        <h1>You will pay ${cartTotalAmount.toFixed(2)} after delivery.</h1>
         <div className={styles.item}>
           <label htmlFor="name" className={styles.lable}>
             Your name
