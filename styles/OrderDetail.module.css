@@ -69,3 +69,16 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+@media screen and (max-width: 480px){
+    .container{
+        /* width: 90%; */
+        position: fixed;
+    }
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+    .wrapper{
+        width: 90%;
+    }
+}
