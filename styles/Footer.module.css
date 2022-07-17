@@ -34,6 +34,10 @@
         width: 90%;
         display: flex;
         flex-direction: column;
+        margin: 20px auto;
+    }
+    .text{
+        text-align: center;
     }
     .socialMediaCont{
         margin-top: 20px;

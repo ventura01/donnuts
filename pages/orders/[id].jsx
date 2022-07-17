@@ -39,7 +39,7 @@ const Order = ({ order }) => {
                 <tr className={styles.trBody}>
                   <td className={styles.tdBody}>
                     <span className={styles.id}></span>
-                    {order._id}
+                    ...{order._id.slice(-10)}
                   </td>
                   <td className={styles.tdBody}>
                     <span className={styles.name}></span>

@@ -38,7 +38,7 @@
 .headerText{
     font-size: 48px;
     font-weight: 900;
-    color: #333;
+    color: var(--prmary-text-color);
 }
 .table{
     width: 100%;
@@ -198,7 +198,7 @@
 }
 @media screen and (max-width: 480px) {
     .container{
-        width: 90%;
+        width: 100%;
         padding: 20px;
         margin: 20px auto;
     }
@@ -206,6 +206,15 @@
         font-size: 36px;
         text-align: center;
         /* margin-top: 10px; */
+    }
+    .name{
+        color: var(--terciary-color);
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .qtyContButton{
+        width: 100px;
+        margin-bottom: 10px;
     }
     .sideWrapper{
         flex-direction: column;
@@ -226,12 +235,16 @@
         justify-content: center;
         margin: 20px 0;
     }
-    .total{
-        font-size: 18px;
+    .price, .qtyContButton, .total{
+        margin-bottom: 10px;
+        
     }
     .price::before{
         content: "Price: ";
         font-weight: 700;
+    }
+    .total{
+        font-size: 18px;
     }
     .total::before{
         content: "Total: ";
