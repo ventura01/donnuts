@@ -95,7 +95,7 @@ const Index = ({ orders, products }) => {
                 <tr className={styles.trBody} key={order._id}>
                   <td className={styles.tdBody}>{order._id.slice(0, 5)}...</td>
                   <td className={styles.tdBody}>{order.customer}</td>
-                  <td className={styles.tdBody}>U${order.total}</td>
+                  <td className={styles.tdBody}>U${order.total.toFixed(2)}</td>
                   <td className={styles.tdBody}>
                     {order.method === 0 ? (
                       <span>CASH</span>

@@ -196,3 +196,56 @@
     background-color: red;
     color: white;
 }
+@media screen and (max-width: 480px) {
+    .container{
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .headerText{
+        font-size: 36px;
+        text-align: center;
+        /* margin-top: 10px; */
+    }
+    .sideWrapper{
+        flex-direction: column;
+    }
+    .table{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .trHead{
+        display: none;
+    }
+    .trBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .total{
+        font-size: 18px;
+    }
+    .price::before{
+        content: "Price: ";
+        font-weight: 700;
+    }
+    .total::before{
+        content: "Total: ";
+        font-weight: 700;
+    }
+    .buttonsCont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .continueShoppingBtnCont{
+        margin-bottom: 10px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+}

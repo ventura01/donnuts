@@ -154,3 +154,27 @@
     background-color: teal;
     color: white;
 }
+@media screen and (max-width: 480px) {
+    .container{
+        width: 90%;
+        /* display: flex; */
+        flex-direction: column;
+    }
+    .item{
+        padding: 10px;
+    }
+    .item:last-child{
+        border: none;
+    }
+    .imgContainer{
+        height: 300px;
+        width: 300px;
+    }
+    .title{
+        font-size: 36px;
+        text-align: center;
+    }
+    .infoProduct{
+        padding: 20px;
+    }
+}
