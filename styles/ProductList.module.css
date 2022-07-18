@@ -27,7 +27,7 @@
 }
 @media screen and (max-width: 480px) {
     .desc{
-        /* width: 90%; */
+        display: none;
     }
     /* .wrapper{
         flex-wrap: wrap;

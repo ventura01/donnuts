@@ -123,9 +123,10 @@
 .qtyArrow{
     cursor: pointer;
 }
-.button{
+.checkoutButton{
     height: 30px;
     border: none;
+    background-color: #fff;
     border-radius: 25px;
     color: teal;
     font-weight: bold;
@@ -139,6 +140,7 @@
 .qtyContButton{
     padding: 5px 10px;
     display: flex;
+    width: 100px;
     justify-content: space-between;
     border: .5px solid lightgray;
     background-color: white;
@@ -160,7 +162,7 @@
 }
 .buttonsCont{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 30px;
     margin-top: 10px;
 }
@@ -169,7 +171,7 @@
     padding: 10px 15px;
     cursor: pointer;
     background-color: transparent;
-    color: gray;
+    color: teal;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -184,8 +186,9 @@
     background-color: transparent;
     border: 1px  solid red;
     padding: 10px 15px;
+    margin-left: 15px;
     cursor: pointer;
-    color: gray;
+    color: red;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;

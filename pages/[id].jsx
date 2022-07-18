@@ -163,7 +163,7 @@ const ProductPage = ({ product }) => {
               <Link href="/" passHref>
                 <div className={styles.continueShoppingBtnCont}>
                   <button className={styles.continueShoppingBtn}>
-                    <BsArrowLeft /> Continue shopping
+                    <BsArrowLeft />
                   </button>
                 </div>
               </Link>

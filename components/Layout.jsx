@@ -9,10 +9,10 @@ const Layout = ({ children, title, description }) => {
   return (
     <div>
       <Head>
-        <title>Donnuts-shop{title ? ` | ${title}` : ""}</title>
+        <title>Donuts Shop{title ? ` | ${title}` : ""}</title>
         <meta
           name="description"
-          content={description ? description : "Descripción del sitio."}
+          content={description ? description : "Best Donuts Shop in Town."}
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

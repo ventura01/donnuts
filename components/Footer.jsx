@@ -24,12 +24,12 @@ const year = new Date().getFullYear();
 const month = new Date().getMonth();
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "#b83400", size: "1.25rem" }}>
+    <IconContext.Provider value={{ color: "#554348", size: "1.25rem" }}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <div className={styles.brandCont}>
-              <GiDonut color="#b83400" size="3rem" />
+              <GiDonut color="#554348" size="3rem" />
             </div>
           </div>
           <div className={styles.center}>

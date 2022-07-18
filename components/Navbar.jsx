@@ -39,11 +39,11 @@ const Navbar = () => {
             <div className={styles.cart}>
               {cartTotalQuantity >= 1 ? (
                 <div>
-                  <MdShoppingCart color="#b83400" size="1.25rem" />
+                  <MdShoppingCart color="#554348" size="1.25rem" />
                   <div className={styles.cartCounter}>{cartTotalQuantity}</div>
                 </div>
               ) : (
-                <MdShoppingCart color="#b83400" size="1.25rem" />
+                <MdShoppingCart color="#554348" size="1.25rem" />
               )}
             </div>
           </Link>

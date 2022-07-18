@@ -1,7 +1,7 @@
 .container{
     background-color: var(--primary-color);
     padding: 30px;
-    border-top: 1px dotted var(--terciary-color);
+    border-top: 1px dotted var(--prmary-text-color);
 }
 .wrapper{
     width: 1220px;
@@ -16,7 +16,7 @@
     display: flex;
 }
 .text{
-    color: var(--terciary-color);
+    color: var(--prmary-text-color);
 
 }
 .listItem{

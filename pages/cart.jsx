@@ -14,7 +14,13 @@ import {
   getTotals,
 } from "../redux/cartSlice";
 
-import { BsFillTrashFill, BsArrowLeft } from "react-icons/bs";
+import {
+  BsFillTrashFill,
+  BsArrowLeft,
+  BsFillXCircleFill,
+  BsPlusSquare,
+  BsDashSquare,
+} from "react-icons/bs";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import OrderDetail from "../components/OrderDetail";
 
@@ -120,14 +126,14 @@ const Cart = () => {
                             className={styles.qtyButton}
                             onClick={() => handleDecreaseItemFromCart(product)}
                           >
-                            -
+                            <BsDashSquare />
                           </button>
                           <span className={styles.qty}>{product.quantity}</span>
                           <button
                             className={styles.qtyButton}
                             onClick={() => handleIncreaseItemFromCart(product)}
                           >
-                            +
+                            <BsPlusSquare />
                           </button>
                         </div>
                       </td>
@@ -142,7 +148,7 @@ const Cart = () => {
                             className={styles.deleteButton}
                             onClick={() => handleRemoveFromCart(product)}
                           >
-                            <BsFillTrashFill color="gray" size=".9rem" />
+                            <BsFillXCircleFill color="gray" size=".9rem" />
                           </button>
                         </div>
                       </td>
@@ -154,7 +160,7 @@ const Cart = () => {
                 <Link href="/" passHref>
                   <div className={styles.continueShoppingBtnCont}>
                     <button className={styles.continueShoppingBtn}>
-                      <BsArrowLeft /> Continue shopping
+                      <BsArrowLeft />
                     </button>
                   </div>
                 </Link>
@@ -163,7 +169,7 @@ const Cart = () => {
                     className={styles.clearCartButton}
                     onClick={() => handleClearCartButton()}
                   >
-                    <BsFillTrashFill color="red" size=".8rem" /> Clear cart
+                    <BsFillTrashFill size=".8rem" />
                   </button>
                 </div>
               </div>
@@ -182,7 +188,10 @@ const Cart = () => {
                   <b className={styles.totalTextTitle}>Total:</b>$
                   {cart.cartTotalAmount.toFixed(2)}
                 </div>
-                <button className={styles.button} onClick={() => setCash(true)}>
+                <button
+                  className={styles.checkoutButton}
+                  onClick={() => setCash(true)}
+                >
                   CHECKOUT NOW!
                 </button>
               </div>
