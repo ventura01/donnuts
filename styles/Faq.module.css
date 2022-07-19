@@ -1,0 +1,41 @@
+.hero{
+    height: 30vh;
+    background-color: #747578;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 1220px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.item{
+    padding: 30px;
+}
+.itemTitle, .itemDesc{
+    color: var(--prmary-text-color);
+}
+.itemDesc{
+    text-align: justify;
+}
+.title, .desc{
+    text-align: center;
+    color: #DBE9EE;
+}
+@media screen and (max-width: 480px){
+    .hero{
+        padding: 20px;
+    }
+    .wrapper{
+        width: 100%;
+        gap: 10px;
+    }
+    .item{
+        grid-column: 1 / -1;
+        padding: 0 20px;
+    }
+}

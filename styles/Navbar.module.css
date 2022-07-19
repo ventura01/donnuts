@@ -33,7 +33,7 @@
     justify-content: center;
 }
 .item:last-child{
-    justify-content: center;
+    justify-content: flex-end;
 }
 .menuLinks{
     display: flex;
@@ -70,6 +70,9 @@
 @media screen and (max-width: 480px) {
     .item:nth-child(2){
         display: none;
+    }
+    .item:last-child{
+        justify-content: center;
     }
     .logoText{
         margin-left: 40px;

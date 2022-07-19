@@ -25,6 +25,7 @@
 }
 .left{
     flex: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
     background-color: white;
     border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -138,10 +139,9 @@
     -o-border-radius: 25px;
 }
 .qtyContButton{
-    padding: 5px 10px;
+    padding: 5px 5px;
     display: flex;
-    width: 100px;
-    justify-content: space-between;
+    justify-content: space-around;
     border: .5px solid lightgray;
     background-color: white;
     border-radius: 5px;

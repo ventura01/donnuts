@@ -35,6 +35,7 @@
   }
   .cardPrice{
     color: var(--terciary-color);
+    font-size: 16px;
   }
   .cardButton{
     border: none;

@@ -17,7 +17,7 @@ import {
 import {
   BsFillTrashFill,
   BsArrowLeft,
-  BsFillXCircleFill,
+  BsXCircle,
   BsPlusSquare,
   BsDashSquare,
 } from "react-icons/bs";
@@ -148,7 +148,7 @@ const Cart = () => {
                             className={styles.deleteButton}
                             onClick={() => handleRemoveFromCart(product)}
                           >
-                            <BsFillXCircleFill color="gray" size=".9rem" />
+                            <BsXCircle color="gray" size="1rem" />
                           </button>
                         </div>
                       </td>
