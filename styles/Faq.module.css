@@ -22,7 +22,12 @@
 .itemDesc{
     text-align: justify;
 }
-.title, .desc{
+.title{
+    text-align: center;
+    color: #DBE9EE;
+    font-weight: 900;
+}
+.desc{
     text-align: center;
     color: #DBE9EE;
 }

@@ -24,6 +24,13 @@ const Order = ({ order }) => {
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.row}>
+            <h1 className={styles.title}>Thanks for your purshase!</h1>
+            <p className={styles.comments}>
+              If you have any comment, you can email us at:{" "}
+              <a className={styles.emailTo} href="mailto:support@gmail.com">
+                support@gmail.com
+              </a>
+            </p>
             <table className={styles.table}>
               <thead className={styles.thead}>
                 <tr className={styles.trHead}>
