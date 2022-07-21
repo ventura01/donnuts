@@ -46,7 +46,7 @@ const Order = ({ order }) => {
                 <tr className={styles.trBody}>
                   <td className={styles.tdBody}>
                     <span className={styles.id}></span>
-                    ...{order._id.slice(-10)}
+                    ...{order._id.slice(-15)}
                   </td>
                   <td className={styles.tdBody}>
                     <span className={styles.name}></span>
@@ -124,7 +124,7 @@ const Order = ({ order }) => {
               {order.total.toFixed(2)}
             </div>
             <button disabled className={styles.button}>
-              PAID!
+              CASH ON DELIVERY!
             </button>
           </div>
         </div>

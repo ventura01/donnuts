@@ -10,6 +10,7 @@ const ProductCard = ({ product }) => {
         <a>
           <div className={styles.imgContainer}>
             <Image
+              className={styles.image}
               src={product.img}
               alt={product.title}
               //   layout="fill"

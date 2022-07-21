@@ -52,6 +52,9 @@
     animation: 1s ease alternate infinite inProgress;
     -webkit-animation: 1s ease alternate infinite inProgress;
 }
+.button{
+    background-color: white;
+}
 @keyframes inProgress{
     from{
         opacity: 0;

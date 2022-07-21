@@ -15,8 +15,19 @@
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
 }
-/* .imgContainer{
-  } */
+/* .imgContainer:hover{ */
+    /* -----FILTROS------ */
+    /* background-color: brown; */
+    /* -----FIN FILTROS------ */
+  /* } */
+  .image:hover{
+    /* -----FILTROS------ */
+    /* mix-blend-mode: multiply; */
+    /* filter: grayscale(100%); */
+    /* -webkit-filter: grayscale(100%); */
+    /* -----FIN FILTROS------ */
+    opacity: 0.9;
+}
   .cardTexts{
     display: flex;
     flex-direction: column;
